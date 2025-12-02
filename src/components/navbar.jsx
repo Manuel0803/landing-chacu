@@ -17,7 +17,6 @@ const Navbar = () => {
         {/* Enlaces de Navegación y CTA */}
         <div className="nav-links">
 
-          {/* la prop 'to' debe coincidir con el 'name' del Elemento al que apunta */}
           <Link activeClass="active" to="inicio" spy={true} smooth={true} offset={-80} duration={500} className="nav-link">
             Inicio
           </Link>

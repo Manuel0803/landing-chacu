@@ -16,7 +16,6 @@
     margin-bottom: 3rem;
 }
 
-/* Contenedor de las dos tarjetas */
 .team-grid {
     display: flex;
     justify-content: center;
@@ -32,14 +31,13 @@
     max-width: 450px;
 }
 
-/* Estilo de la Foto/Círculo */
 .member-photo-placeholder {
     width: 120px;
     height: 120px;
     background-color: var(--color-bg-default); 
     border-radius: 50%;
     margin: 0 auto 1.5rem auto;
-    border: 2px solid var(--color-secondary); /* Borde de acento Dorado/Arena */
+    border: 2px solid var(--color-secondary);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -52,7 +50,7 @@
     position: absolute;
     bottom: -10px;
     right: 5px;
-    background-color: var(--color-primary); /* Azul Marino */
+    background-color: var(--color-primary);
     color: var(--color-bg-paper);
     border-radius: 50%;
     width: 30px;

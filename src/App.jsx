@@ -1,39 +1,53 @@
 import './App.css'; 
 import AppStyles from './theme/app-styles.js';
+import { Element } from 'react-scroll';
 import Navbar from './components/Navbar.jsx'; 
 import Hero from './components/Hero.jsx';
-import Footer from './components/Footer.jsx'; 
+import Footer from './components/Footer.jsx'; // hay que mejorar
 import Team from './components/Team.jsx';
+import Contact from './components/Contact.jsx'; // hay que mejorar
+//import Process from './components/Process.jsx'; // falta hacer
+//import Services from './components/Services.jsx' // falta hacer
+// import Portfolio from './components/Portfolio.jsx' // falta hacer
 
 function App() {
-
-  const handleContactClick = () => {
-    const contactSection = document.getElementById('contact-section');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="App" style={AppStyles}>
       
-      <Navbar onContactClick={handleContactClick} />
+      <Navbar />
       
       <main>
-        <Hero onContactClick={handleContactClick} />
-        
-        <Team /> 
+        <Element name="inicio">
+          <Hero />
+        </Element>
 
-        <div className="container" style={{ padding: '8rem 0', textAlign: 'center' }}>
+        <Element name="servicios" className="container" style={{ padding: '8rem 0', textAlign: 'center' }}>
             <h2>En desarrollo</h2>
-            <p style={{color: 'var(--color-text-secondary)'}}>Faltan las secciones Servicios, Portafolio y Proceso.</p>
-        </div>
+            <p style={{color: 'var(--color-text-secondary)'}}>Falta la sección Servicios.</p>
+        </Element>
 
+        <Element name="proceso" className="container" style={{ padding: '8rem 0', textAlign: 'center' }}>
+            <h2>En desarrollo</h2>
+            <p style={{color: 'var(--color-text-secondary)'}}>Falta la sección Procesos.</p>
+        </Element>
+
+        <Element name="proceso" className="container" style={{ padding: '8rem 0', textAlign: 'center' }}>
+            <h2>En desarrollo</h2>
+            <p style={{color: 'var(--color-text-secondary)'}}>Falta la sección Portfolio.</p>
+        </Element>
+
+        <Element name="sobre-nosotros">
+          <Team /> 
+        </Element>
+
+        <Element name="contacto">
+          <Contact />
+        </Element>
+        
       </main>
       
-      <div id="contact-section">
-          <Footer onContactClick={handleContactClick} />
-      </div>
+      <Footer />
 
     </div>
   );

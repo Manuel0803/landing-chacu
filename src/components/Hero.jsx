@@ -1,8 +1,9 @@
 import '../styles/Hero.css';
+import { Link } from 'react-scroll';
 
-const Hero = ({ onContactClick }) => {
+const Hero = () => {
     return (
-        <section className="hero-section" id="hero">
+        <section className="hero-section" id="inicio">
             <div className="container hero-content">
                 
                 <h1 className="hero-title">
@@ -14,13 +15,16 @@ const Hero = ({ onContactClick }) => {
                 </p>
 
                 <div className="hero-cta-group">
-                    <button onClick={onContactClick} className="btn-cta primary-cta">
-                        Trabajemos Juntos
-                    </button>
                     
-                    <a href="#services" className="secondary-cta">
+                    <Link activeClass="active" to="contacto" spy={true} smooth={true} offset={-80} duration={500} className="btn-cta primary-cta">
+                        Trabajemos juntos
+                    </Link>
+                    
+                    <Link activeClass="active" to="servicios" spy={true} smooth={true} offset={-80} duration={500} className="secondary-cta">
                         Ver Servicios
-                    </a>
+                    </Link>
+
+                    
                 </div>
             </div>
         </section>

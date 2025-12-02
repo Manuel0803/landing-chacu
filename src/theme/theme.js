@@ -2,7 +2,6 @@ const theme = {
     colors: {
         mode: 'light',
         
-        
         primary: {
             main: '#2C516F', 
             light: '#567A99', 

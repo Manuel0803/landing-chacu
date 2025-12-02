@@ -4,7 +4,7 @@ import teamMembers from '../data/team-data';
 const Team = () => {
 
     return (
-        <section className="team-section" id="about">
+        <section className="team-section" id="sobre-nosotros">
             <div className="container">
                 <h2 className="section-title">Sobre Nosotros</h2>
                 <p className="section-subtitle">

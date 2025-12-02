@@ -1,31 +1,42 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css'; 
+import AppStyles from './theme/app-styles.js';
+import Navbar from './components/Navbar.jsx'; 
+import Hero from './components/Hero.jsx';
+import Footer from './components/Footer.jsx'; 
+import Team from './components/Team.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-        </a>
-        <a href="https://react.dev" target="_blank">
-        </a>
+    <div className="App" style={AppStyles}>
+      
+      <Navbar onContactClick={handleContactClick} />
+      
+      <main>
+        <Hero onContactClick={handleContactClick} />
+        
+        <Team /> 
+
+        <div className="container" style={{ padding: '8rem 0', textAlign: 'center' }}>
+            <h2>En desarrollo</h2>
+            <p style={{color: 'var(--color-text-secondary)'}}>Faltan las secciones Servicios, Portafolio y Proceso.</p>
+        </div>
+
+      </main>
+      
+      <div id="contact-section">
+          <Footer onContactClick={handleContactClick} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+    </div>
+  );
 }
 
-export default App
+export default App;

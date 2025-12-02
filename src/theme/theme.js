@@ -1,21 +1,19 @@
-export const theme = {
-    // --- PALETA DE COLORES ---
+const theme = {
     colors: {
         mode: 'light',
         
-        // Colores principales de la marca 
+        
         primary: {
-            main: '#2C516F', // Primary Blue
+            main: '#2C516F', 
             light: '#567A99', 
             dark: '#1F3C53',  
         },
         secondary: {
-            main: '#CFA968', // Accent Gold/Sand
+            main: '#CFA968', 
             light: '#E6C697', 
             dark: '#A3814C', 
         },
         
-        // Colores de estado 
         success: {
             main: '#10b981',
         },
@@ -26,7 +24,6 @@ export const theme = {
             main: '#f59e0b',
         },
         
-        // Colores de fondo y texto
         background: {
             default: '#F2F2F2', 
             paper: '#FFFFFF',      
@@ -34,15 +31,12 @@ export const theme = {
         text: {
             primary: '#2C516F', 
             secondary: '#4A4A4A', 
-            // Puedes agregar más: disabled: '#999'
         },
     },
 
-    // --- TIPOGRAFÍA ---
     typography: {
         fontFamily: "Inter, Poppins, Nunito, Arial, sans-serif", 
         
-        // Pesos de fuente
         fontWeight: {
             light: 300,
             regular: 400,
@@ -50,17 +44,12 @@ export const theme = {
             bold: 700,
         },
         
-        // Estilos
+
         fontStyle: {
             italic: "italic",
         },
-
-        // Aquí puedes definir tamaños de fuente específicos
-        // h1: '3rem',
-        // body1: '1rem',
     },
-    
-    // --- ESPACIADO ---
+
     spacing: {
         unit: 8, 
         small: '8px',
@@ -68,3 +57,5 @@ export const theme = {
         large: '24px',
     }
 };
+
+export default theme;

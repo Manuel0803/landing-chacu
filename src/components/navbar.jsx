@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container nav-container">
 
         <div className="logo-area">
-          <Link to="hero" smooth={true} duration={500} spy={true} offset={-80} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+          <Link to="inicio" smooth={true} duration={500} spy={true} offset={-80} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
             <img src={logoSrc} alt="Chacú.io Logo" className="logo-icon" />
             <span className="logo-text">Chacú.io</span>
           </Link>

@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
+import { AiOutlineLinkedin, AiOutlineInstagram, AiOutlineMail, AiOutlineEnvironment } from "react-icons/ai";
 
 const Contact = () => {
     const formRef = useRef();
@@ -109,19 +110,22 @@ const Contact = () => {
                     
                     <div className="contact-details">
                         <div className="detail-item">
-                            <span className="icon">📧</span>
-                            <a href="mailto:hola@chacu.io">hola@chacu.io</a>
+                            <AiOutlineMail className="icon" />
+                            <a href="mailto:chacochacu.io@gmail.com">chacochacu.io@gmail.com</a>
                         </div>
                         <div className="detail-item">
-                            <span className="icon">📍</span>
+                            <AiOutlineEnvironment className="icon" />
                             <span>Resistencia, Chaco, Argentina</span>
                         </div>
                     </div>
 
                     <div className="social-links">
-                        <a href="#" className="social-link">LinkedIn</a>
-                        <a href="#" className="social-link">Instagram</a>
-                        <a href="#" className="social-link">GitHub</a>
+                        <a href="https://www.linkedin.com/in/chacu-io" className="social-link" aria-label="LinkedIn" target='_blank' rel="noopener noreferrer">
+                            <AiOutlineLinkedin />
+                        </a>
+                        <a href="https://www.instagram.com/chacu.io" className="social-link" aria-label="Instagram" target='_blank' rel="noopener noreferrer">
+                            <AiOutlineInstagram />
+                        </a>
                     </div>
                 </div>
 
@@ -131,7 +135,6 @@ const Contact = () => {
                             <label htmlFor="bot_field">Don't fill this out if you're human</label>
                             <input type="text" name="bot_field" id="bot_field" tabIndex="-1" autoComplete="off" />
                         </div>
-
 
                         <div className="form-group">
                             <label htmlFor="user_name">Nombre</label>

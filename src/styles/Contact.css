@@ -41,6 +41,12 @@
     font-size: 1.05rem;
 }
 
+.detail-item .icon {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
 .detail-item a {
     color: var(--color-text-primary);
     text-decoration: none;
@@ -51,33 +57,30 @@
     color: var(--color-primary);
 }
 
-.social-links p {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 0.5rem;
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .social-link {
-    margin-right: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     color: var(--color-primary);
     text-decoration: none;
-    font-weight: var(--font-weight-medium);
-    position: relative;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: rgba(var(--color-primary-light), 0.1);
+    transition: all 0.3s ease;
 }
 
-.social-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--color-secondary);
-    transition: width 0.3s;
-}
-
-.social-link:hover::after {
-    width: 100%;
+.social-link:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-3px);
 }
 
 .contact-form-wrapper {
@@ -172,6 +175,10 @@
 }
 
 @media (max-width: 768px) {
+    .contact-section {
+        padding: 3rem 1.5rem;
+    }
+
     .contact-container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -179,5 +186,9 @@
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .social-links {
+        justify-content: flex-start;
     }
 }

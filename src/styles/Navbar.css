@@ -1,5 +1,5 @@
 .navbar-chacu {
-    padding: 1.25rem 0; 
+    padding: 0.8rem 0; 
     background-color: var(--color-bg-paper); 
     border-bottom: 1px solid var(--color-bg-default); 
     position: sticky;
@@ -19,15 +19,28 @@
     color: var(--color-text-primary);
 }
 
+.logo-area a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo-icon {
-    height: 20px; 
-    margin-right: 0.5rem;
+    height: 55px; 
+    width: auto;  
+    margin-right: 0.75rem;
+    object-fit: contain;
 }
 
 .logo-text {
+    font-family: "Saved By Zero", "Saved-By-Zero", sans-serif; 
     font-weight: var(--font-weight-bold);
-    font-size: 1.1rem;
+    font-size: 1.25rem; 
+    color: var(--color-primary);
+    letter-spacing: 5px;
 }
+
 
 .nav-links {
     display: flex;
@@ -41,9 +54,11 @@
     font-size: 0.95rem;
     font-weight: 500; 
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--color-primary); 
 }
 

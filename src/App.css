@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Saved By Zero';
+  src: url('./assets/fonts/SavedByZero.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,12 +24,10 @@ body {
   margin: 0 auto;
 }
 
-
 h1, h2, h3 {
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
 }
-
 
 .btn-cta {
   display: inline-block;

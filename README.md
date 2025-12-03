@@ -1,16 +1,39 @@
-# React + Vite
+💻 Chacú.io – Landing Page | Tecnología con Identidad Chaqueña
+🌟 Descripción del Proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Presentamos la Landing Page oficial de Chacú.io, diseñada para mostrar nuestros servicios, equipo y proyectos (Portfolio) con una identidad moderna y profesional.
+Fue construida con enfoque en UX, modularidad en React, y optimización para conversión, logrando una experiencia fluida, clara y enfocada en el usuario.
 
-Currently, two official plugins are available:
+Nuestro objetivo principal:
+🎯 Convertir visitantes en leads cualificados mediante un formulario de contacto robusto, seguro y bien optimizado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠️ Stack Tecnológico
+A continuación, el stack que impulsa Chacú.io:
 
-## React Compiler
+| 🧩 **Categoría**      | ⚙️ **Tecnología**    | 🎯 **Propósito**                                                |
+| --------------------- | -------------------- | --------------------------------------------------------------- |
+| **Frontend**          | React (Vite)         | Aplicación modular, rápida y optimizada.                        |
+| **Styling**           | CSS3 + Variables CSS | Sistema de diseño basado en `theme.js`.                         |
+| **UX / Routing**      | react-scroll         | Navegación fluida entre secciones.                              |
+| **Assets / Branding** | PNG, OTF             | Envío seguro de emails sin backend propio.                      |
+| **Formularios**       | EmailJS              |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+🔐 Seguridad + UX al máximo nivel:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛡️ Anti-Spam de doble capa
+
+Honeypot invisible
+
+Rate limiting de 1 hora (localStorage)
+
+
+💬 Mensajes de error y éxito claros, amigables y bien localizados.
+2️⃣ Portfolio Dinámico y Escalable
+Una sección visual, organizada y fácil de expandir:
+🖼️ Tarjetas responsivas con categorías y tags tecnológicos.
+🎨 Diseño en grid adaptativo para mejor visualización en todas las pantallas.
+3️⃣ Navegación y Branding Profesional
+🔥 Identidad visual fuerte y consistente:
+🧭 Navbar fija (sticky) con acceso rápido a todas las secciones.
+🖋️ Tipografía corporativa + logo optimizado, reforzando marca.

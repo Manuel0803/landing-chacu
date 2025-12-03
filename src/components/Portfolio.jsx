@@ -19,7 +19,7 @@ const Portfolio = () => {
                                 className="card-image" 
                             />
                             <div className="card-overlay">
-                                <a href={project.link} className="btn-view">
+                                <a href={project.link} className="btn-view" target='_blank' rel="noopener noreferrer">
                                     Ver Proyecto
                                 </a>
                             </div>

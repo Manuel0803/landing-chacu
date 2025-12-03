@@ -6,9 +6,8 @@ const teamMembers = [
             id: 1,
             name: "Juan Pablo Bolanio",
             role: "Co-Founder & Developer",
-            bio: "Especializado en Estrategia de Producto y Experiencia de Usuario (UI/UX). Mi enfoque es crear soluciones funcionales y estéticas que guíen al usuario y generen valor.",
+            bio: "Full Stack Developer especializado en Java, Spring Boot, Node.js y React. Me enfoco en construir aplicaciones sólidas y mantenibles, transformando necesidades en productos funcionales y bien diseñados.",
             image: founderOnePhoto,
-            icon: "🎨",
             socials: {
                 portfolio: "#",
                 linkedin: "https://www.linkedin.com/in/bolaniojuanpablo", 
@@ -19,9 +18,8 @@ const teamMembers = [
             id: 2,
             name: "Manuel Visñuk",
             role: "Co-Founder & Developer",
-            bio: "Arquitecto de soluciones robustas y escalables. Me encargo de llevar la estrategia a la realidad con código limpio y eficiente, garantizando el mejor rendimiento.",
+            bio: "Desarrollador Web Full Stack, Conocimiento robusto en Java, Spring Boot, Node.js y React. Mi experiencia abarca desde el diseño conceptual en Figma hasta la implementación escalable. Priorizando la calidad de código, las buenas prácticas y el diseño centrado en el usuario.",
             image: founderTwoPhoto,
-            icon: "💻",
             socials: {
                 portfolio: "#",
                 linkedin: "https://www.linkedin.com/in/manuelvisnuk",
@@ -31,3 +29,7 @@ const teamMembers = [
     ];
 
 export default teamMembers;
+
+
+
+

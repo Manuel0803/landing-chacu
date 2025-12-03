@@ -11,7 +11,7 @@ const teamMembers = [
             icon: "🎨",
             socials: {
                 portfolio: "#",
-                linkedin: "https://www.linkedin.com/bolaniojuanpablo", 
+                linkedin: "https://www.linkedin.com/in/bolaniojuanpablo", 
                 github: "https://www.github.com/juampibolanio"
             }
         },
@@ -24,7 +24,7 @@ const teamMembers = [
             icon: "💻",
             socials: {
                 portfolio: "#",
-                linkedin: "https://www.linkedin.com/manuelvisnuk",
+                linkedin: "https://www.linkedin.com/in/manuelvisnuk",
                 github: "https://www.github.com/Manuel0803"
             }
         }

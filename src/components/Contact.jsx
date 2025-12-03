@@ -1,24 +1,56 @@
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser'; 
+import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 
 const Contact = () => {
-
     const formRef = useRef();
     const [status, setStatus] = useState({ loading: false, error: null, success: false });
+
+    const COOLDOWN_TIME = 60 * 60 * 1000;
+
+    const checkRateLimit = () => {
+        const lastSent = localStorage.getItem('lastEmailSent');
+        if (lastSent) {
+            const timePassed = Date.now() - parseInt(lastSent);
+            if (timePassed < COOLDOWN_TIME) {
+                const minutesLeft = Math.ceil((COOLDOWN_TIME - timePassed) / 60000);
+                return `Por favor, espera ${minutesLeft} minutos antes de enviar otro mensaje.`;
+            }
+        }
+        return null;
+    };
+
     const handleSubmit = (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
+
+        const honeypot = e.target.elements.bot_field.value;
+        if (honeypot) {
+            console.log("Bot detectado y bloqueado.");
+            setStatus({ loading: false, error: null, success: true });
+            e.target.reset();
+            return; 
+        }
+
+        const rateLimitError = checkRateLimit();
+        if (rateLimitError) {
+            setStatus({ loading: false, error: rateLimitError, success: false });
+            return;
+        }
+
         setStatus({ loading: true, error: null, success: false });
 
         emailjs.sendForm(
-                import.meta.env.VITE_EMAIL_SERVICE_ID,
-                import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-                formRef.current,
-                import.meta.env.VITE_EMAIL_PUBLIC_KEY
+            import.meta.env.VITE_EMAIL_SERVICE_ID,
+            import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+            formRef.current,
+            import.meta.env.VITE_EMAIL_PUBLIC_KEY
         )       
         .then((result) => {
             console.log(result.text);
             setStatus({ loading: false, error: null, success: true });
+            
+            localStorage.setItem('lastEmailSent', Date.now().toString());
+
             e.target.reset(); 
             setTimeout(() => setStatus(prev => ({ ...prev, success: false })), 5000);
         }, (error) => {
@@ -50,7 +82,6 @@ const Contact = () => {
                     </div>
 
                     <div className="social-links">
-                        <p>Síguenos en:</p>
                         <a href="#" className="social-link">LinkedIn</a>
                         <a href="#" className="social-link">Instagram</a>
                         <a href="#" className="social-link">GitHub</a>
@@ -59,6 +90,11 @@ const Contact = () => {
 
                 <div className="contact-form-wrapper">
                     <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
+                        <div style={{ display: 'none', visibility: 'hidden' }}>
+                            <label htmlFor="bot_field">Don't fill this out if you're human</label>
+                            <input type="text" name="bot_field" id="bot_field" tabIndex="-1" autoComplete="off" />
+                        </div>
+
                         <div className="form-group">
                             <label htmlFor="user_name">Nombre</label>
                             <input type="text" id="user_name" name="user_name" placeholder="Tu nombre" required />

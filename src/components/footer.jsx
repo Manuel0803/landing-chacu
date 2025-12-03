@@ -1,20 +1,71 @@
-import '../styles/Footer.css'; 
+import React from 'react';
+import '../styles/Footer.css';
+import { Link } from 'react-scroll';
+import logo from '../assets/chacu-logo.png';
 
 const Footer = () => {
+    const navLinks = [
+        { to: "inicio", label: "Inicio" },
+        { to: "servicios", label: "Servicios" },
+        { to: "portfolio", label: "Portfolio" },
+        { to: "sobre-nosotros", label: "Equipo" },
+        { to: "contacto", label: "Contacto" }
+    ];
+
     return (
-        <footer>
-            <div className="bottom-footer">
-                <div className="container footer-info">
-                    <p className="footer-copyright">
-                        © {new Date().getFullYear()} Chacú.io. Tecnología hecha con identidad.
-                    </p>
-                    
-                    <div className="footer-links">
-                        <a href="mailto:hola@chacu.io" className="footer-link">hola@chacu.io</a>
-                        {/* Aca van iconos de redes, ej:
-                        <a href="#" target="_blank" className="social-icon">🔗</a>
-                        <a href="#" target="_blank" className="social-icon">📷</a> */}
+        <footer className="main-footer">
+            <div className="container footer-content-wrapper">
+                
+                <div className="footer-col branding-col">
+                    <div className="brand-wrapper">
+                        <img src={logo} alt="Chacú.io Logo" className="footer-logo-img" />
                     </div>
+                    
+                    <p className="footer-tagline">Tecnología hecha con identidad. <br />Resistencia, Chaco, Argentina</p>
+                    
+                    <div className="footer-social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">🔗</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">📷</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">👥</a>
+                    </div>
+                </div>
+
+                <div className="footer-col navigation-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        {navLinks.map((link) => (
+                            <li key={link.to}>
+                                <Link
+                                    to={link.to}
+                                    smooth={true}
+                                    duration={500}
+                                    className="footer-link"
+                                >
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="footer-col contact-col">
+                    <h4>Contacto</h4>
+                    <p>
+                        ¿Tienes un proyecto en mente? Escríbenos y charlemos sin compromiso.
+                    </p>
+                    <a href="mailto:hola@chacu.io" className="footer-cta-btn">
+                        hola@chacu.io
+                    </a>
+                </div>
+
+            </div>
+
+            {/* Derechos de Autor */}
+            <div className="bottom-footer">
+                <div className="container bottom-footer-content">
+                    <p className="footer-copyright">
+                        © {new Date().getFullYear()} Chacú.io. Todos los derechos reservados.
+                    </p>
                 </div>
             </div>
         </footer>

@@ -10,7 +10,7 @@ const Navbar = () => {
 
         <div className="logo-area">
           <Link 
-            to="hero" 
+            to="inicio" 
             smooth={true} 
             duration={500} 
             spy={true} 

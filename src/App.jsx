@@ -1,13 +1,13 @@
 import './App.css'; 
 import AppStyles from './theme/app-styles.js';
 import { Element } from 'react-scroll';
-import Navbar from './components/Navbar.jsx'; 
 import Hero from './components/Hero.jsx';
+import Navbar from './components/navbar.jsx';
 import Footer from './components/Footer.jsx'; 
 import Team from './components/Team.jsx';
 import Contact from './components/Contact.jsx'; 
-//import Process from './components/Process.jsx'; // falta hacer
-//import Services from './components/Services.jsx' // falta hacer
+import Process from './components/Process.jsx';
+import Services from './components/Services.jsx'
 import Portfolio from './components/Portfolio.jsx';
 
 function App() {
@@ -22,18 +22,14 @@ function App() {
           <Hero />
         </Element>
 
-        {/* Secciones en desarrollo (Placeholder) */}
-        <Element name="servicios" className="container" style={{ padding: '8rem 0', textAlign: 'center' }}>
-            <h2>En desarrollo</h2>
-            <p style={{color: 'var(--color-text-secondary)'}}>Falta la sección Servicios.</p>
+        <Element name="servicios">
+            <Services />
         </Element>
 
-        <Element name="proceso" className="container" style={{ padding: '8rem 0', textAlign: 'center' }}>
-            <h2>En desarrollo</h2>
-            <p style={{color: 'var(--color-text-secondary)'}}>Falta la sección Procesos.</p>
+        <Element name="proceso">
+            <Process />
         </Element>
 
-        {/* Sección Portfolio Integrada */}
         <Element name="portfolio">
             <Portfolio />
         </Element>

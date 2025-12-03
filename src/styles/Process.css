@@ -1,0 +1,123 @@
+.process-section {
+    padding: 5rem 2rem;
+    background-color: var(--color-bg-default);
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.process-header .section-title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.process-header .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-card {
+    background-color: var(--color-bg-paper);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.process-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.process-card:hover .process-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.process-icon {
+    font-size: 2rem;
+    filter: brightness(0) invert(1);
+}
+
+.process-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.process-number {
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.process-title {
+    font-size: 1.35rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.process-description {
+    font-size: 0.925rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+    .process-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .process-header .section-title {
+        font-size: 2rem;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .process-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

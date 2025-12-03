@@ -43,8 +43,8 @@
 }
 
 .process-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
 .process-icon-wrapper {
@@ -61,12 +61,15 @@
 }
 
 .process-card:hover .process-icon-wrapper {
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(5deg);
 }
 
 .process-icon {
     font-size: 2rem;
-    filter: brightness(0) invert(1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .process-content {

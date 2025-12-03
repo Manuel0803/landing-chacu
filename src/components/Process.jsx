@@ -1,7 +1,15 @@
 import steps from '../data/steps-data';
 import '../styles/Process.css';
+import { AiOutlineComment, AiOutlineFileText, AiOutlineCode, AiOutlineRocket } from "react-icons/ai";
 
 const Process = () => {
+
+    const iconMap = {
+        1: <AiOutlineComment />,
+        2: <AiOutlineFileText />,
+        3: <AiOutlineCode />,
+        4: <AiOutlineRocket />
+    };
 
     return (
         <section className="process-section" id="process">
@@ -16,7 +24,7 @@ const Process = () => {
                 {steps.map((step) => (
                     <article className="process-card" key={step.id}>
                         <div className="process-icon-wrapper">
-                            <span className="process-icon">{step.icon}</span>
+                            <span className="process-icon">{iconMap[step.id]}</span>
                         </div>
                         <div className="process-content">
                             <h3 className="process-number">{step.number}</h3>

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/Footer.css';
 import { Link } from 'react-scroll';
 import logo from '../assets/chacu-logo.png';
@@ -16,11 +15,6 @@ const Footer = () => {
                     
                     <p className="footer-tagline">Tecnología hecha con identidad. <br />Resistencia, Chaco, Argentina</p>
                     
-                    <div className="footer-social-links">
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">🔗</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">📷</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">👥</a>
-                    </div>
                 </div>
 
                 <div className="footer-col navigation-col">
@@ -46,8 +40,8 @@ const Footer = () => {
                     <p>
                         ¿Tienes un proyecto en mente? Escríbenos y charlemos sin compromiso.
                     </p>
-                    <a href="mailto:hola@chacu.io" className="footer-cta-btn">
-                        hola@chacu.io
+                    <a href="mailto:chacochacu.io@gmail.com" className="footer-cta-btn">
+                        chacochacu.io@gmail.com
                     </a>
                 </div>
 

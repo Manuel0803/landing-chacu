@@ -1,5 +1,6 @@
 import '../styles/Team.css';
 import teamMembers from '../data/team-data';
+import { AiOutlineLinkedin, AiOutlineGithub, AiOutlineGlobal } from "react-icons/ai";
 
 const Team = () => {
 
@@ -19,7 +20,6 @@ const Team = () => {
                                 className="member-photo-placeholder" 
                                 style={{ backgroundImage: `url(${member.image})` }}
                             >
-                                <span className="role-icon">{member.icon}</span> 
                             </div>
                             
                             <h3 className="member-name">{member.name}</h3>
@@ -27,9 +27,24 @@ const Team = () => {
                             <p className="member-bio">{member.bio}</p>
                             
                             <div className="social-links">
-                                <a href={member.socials.portfolio} target="_blank" rel="noopener noreferrer" className="social-link">🔗</a> 
-                                <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">in</a> 
-                                <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="social-link">github</a> 
+                                <a 
+                                    href={member.socials.linkedin} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="social-link"
+                                    aria-label="LinkedIn"
+                                >
+                                    <AiOutlineLinkedin />
+                                </a>
+                                <a 
+                                    href={member.socials.github} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="social-link"
+                                    aria-label="GitHub"
+                                >
+                                    <AiOutlineGithub />
+                                </a>
                             </div>
 
                         </div>

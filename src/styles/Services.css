@@ -1,5 +1,6 @@
 .services-section {
     padding: 5rem 2rem;
+    background-color: var(--color-bg-paper);
 }
 
 .services-header {
@@ -56,6 +57,7 @@
     justify-content: center;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-card:hover .service-icon-wrapper {
@@ -63,7 +65,11 @@
 }
 
 .service-icon {
-    font-size: 2rem;
+    font-size: 2.25rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-title {
@@ -76,6 +82,7 @@
     font-size: 1rem;
     color: var(--color-text-secondary);
     text-align: center;
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {

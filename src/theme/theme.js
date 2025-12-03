@@ -34,7 +34,7 @@ const theme = {
     },
 
     typography: {
-        fontFamily: "Inter, Poppins, Nunito, Arial, sans-serif", 
+        fontFamily: "Inter, Poppins, Nunito, Arial, sans-serif, Saved-By-Zero",    
         
         fontWeight: {
             light: 300,

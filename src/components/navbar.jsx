@@ -1,5 +1,6 @@
+import React from 'react';
 import '../styles/Navbar.css';
-import logoSrc from '../assets/chacu-logo.webp';
+import logoSrc from '../assets/chacu-logo.png'; 
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
@@ -8,13 +9,23 @@ const Navbar = () => {
       <div className="container nav-container">
 
         <div className="logo-area">
-          <Link to="hero" smooth={true} duration={500} spy={true} offset={-80} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-            <img src={logoSrc} alt="Chacú.io Logo" className="logo-icon" />
+          <Link 
+            to="hero" 
+            smooth={true} 
+            duration={500} 
+            spy={true} 
+            offset={-80} 
+            style={{ cursor: 'pointer' }} 
+          >
+            <img 
+                src={logoSrc} 
+                alt="Chacú.io Logo" 
+                className="logo-icon" 
+            />
             <span className="logo-text">Chacú.io</span>
           </Link>
         </div>
 
-        {/* Enlaces de Navegación y CTA */}
         <div className="nav-links">
 
           <Link activeClass="active" to="inicio" spy={true} smooth={true} offset={-80} duration={500} className="nav-link">
@@ -27,6 +38,10 @@ const Navbar = () => {
 
           <Link activeClass="active" to="sobre-nosotros" spy={true} smooth={true} offset={-80} duration={500} className="nav-link">
             Sobre Nosotros
+          </Link>
+
+          <Link activeClass="active" to="portfolio" spy={true} smooth={true} offset={-80} duration={500} className="nav-link">
+            Portfolio
           </Link>
 
           <Link to="contacto" spy={true} smooth={true} offset={-80} duration={500} className="btn-cta nav-cta">

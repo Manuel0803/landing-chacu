@@ -8,6 +8,32 @@ const Contact = () => {
 
     const COOLDOWN_TIME = 60 * 60 * 1000;
 
+    const validateInputs = (name, email, message) => {
+        if (!name || !name.trim()) {
+            return "El campo nombre es obligatorio.";
+        }
+        if (name.trim().length < 2) {
+            return "El nombre es muy corto, debe tener al menos 2 caracteres.";
+        }
+        
+        if (!email || !email.trim()) {
+            return "El campo email es obligatorio.";
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return "El formato del email no es válido (ejemplo: usuario@dominio.com).";
+        }
+
+        if (!message || !message.trim()) {
+            return "Por favor, escribe un mensaje para nosotros.";
+        }
+        if (message.trim().length < 10) {
+            return "El mensaje es muy breve. Cuéntanos un poco más sobre tu proyecto.";
+        }
+
+        return null; 
+    };
+
     const checkRateLimit = () => {
         const lastSent = localStorage.getItem('lastEmailSent');
         if (lastSent) {
@@ -23,12 +49,23 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const honeypot = e.target.elements.bot_field.value;
+        const formElements = e.target.elements;
+        const nameValue = formElements.user_name.value;
+        const emailValue = formElements.user_email.value;
+        const messageValue = formElements.message.value;
+        const honeypot = formElements.bot_field.value;
+
         if (honeypot) {
             console.log("Bot detectado y bloqueado.");
             setStatus({ loading: false, error: null, success: true });
             e.target.reset();
             return; 
+        }
+
+        const inputError = validateInputs(nameValue, emailValue, messageValue);
+        if (inputError) {
+            setStatus({ loading: false, error: inputError, success: false });
+            return;
         }
 
         const rateLimitError = checkRateLimit();
@@ -95,19 +132,20 @@ const Contact = () => {
                             <input type="text" name="bot_field" id="bot_field" tabIndex="-1" autoComplete="off" />
                         </div>
 
+
                         <div className="form-group">
                             <label htmlFor="user_name">Nombre</label>
-                            <input type="text" id="user_name" name="user_name" placeholder="Tu nombre" required />
+                            <input type="text" id="user_name" name="user_name" placeholder="Tu nombre" />
                         </div>
                         
                         <div className="form-group">
                             <label htmlFor="user_email">Email</label>
-                            <input type="email" id="user_email" name="user_email" placeholder="tu@email.com" required />
+                            <input id="user_email" name="user_email" placeholder="tu@email.com" />
                         </div>
 
                         <div className="form-group">
                             <label htmlFor="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
                         </div>
 
                         <button type="submit" className="btn-submit" disabled={status.loading}>

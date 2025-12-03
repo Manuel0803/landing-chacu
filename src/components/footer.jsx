@@ -2,16 +2,9 @@ import React from 'react';
 import '../styles/Footer.css';
 import { Link } from 'react-scroll';
 import logo from '../assets/chacu-logo.png';
+import navLinks from '../data/footer-data';
 
 const Footer = () => {
-    const navLinks = [
-        { to: "inicio", label: "Inicio" },
-        { to: "servicios", label: "Servicios" },
-        { to: "portfolio", label: "Portfolio" },
-        { to: "sobre-nosotros", label: "Equipo" },
-        { to: "contacto", label: "Contacto" }
-    ];
-
     return (
         <footer className="main-footer">
             <div className="container footer-content-wrapper">
@@ -60,7 +53,6 @@ const Footer = () => {
 
             </div>
 
-            {/* Derechos de Autor */}
             <div className="bottom-footer">
                 <div className="container bottom-footer-content">
                     <p className="footer-copyright">

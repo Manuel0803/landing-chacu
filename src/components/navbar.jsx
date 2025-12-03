@@ -36,15 +36,15 @@ const Navbar = () => {
             Servicios
           </Link>
 
-          <Link activeClass="active" to="sobre-nosotros" spy={true} smooth={true} offset={-80} duration={500} className="nav-link">
-            Sobre Nosotros
-          </Link>
-
           <Link activeClass="active" to="portfolio" spy={true} smooth={true} offset={-80} duration={500} className="nav-link">
             Portfolio
           </Link>
 
-          <Link to="contacto" spy={true} smooth={true} offset={-80} duration={500} className="btn-cta nav-cta">
+          <Link activeClass="active" to="sobre-nosotros" spy={true} smooth={true} offset={-80} duration={500} className="nav-link">
+            Sobre Nosotros
+          </Link>
+
+          <Link to="contacto" spy={true} smooth={true} offset={-80} duration={500} className="nav-link">
             Contacto
           </Link>
         </div>

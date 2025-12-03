@@ -11,10 +11,10 @@
 }
 
 .portfolio-header .section-title {
+    font-family: var(--font-family-base);
     font-size: 2.5rem;
     color: var(--color-primary);
     margin-bottom: 1rem;
-    font-family: var(--font-family-base);
 }
 
 .portfolio-header .section-subtitle {
@@ -118,6 +118,7 @@
 }
 
 .card-title {
+    font-family: var(--font-family-base);
     font-size: 1.25rem;
     font-weight: var(--font-weight-bold);
     color: var(--color-text-primary);
